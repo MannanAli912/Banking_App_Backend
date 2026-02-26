@@ -1,37 +1,4 @@
-﻿//using Microsoft.AspNetCore.Mvc;
-//using TestProject.DTOs;
-//using TestProject.Interfaces;
-
-//namespace TestProject.Controllers
-//{
-//    [ApiController]
-//    [Route("api/[controller]")]
-//    public class RegistrationController : ControllerBase
-//    {
-//        private readonly IRegistrationService _service;
-//        public RegistrationController(IRegistrationService service) => _service = service;
-
-//        [HttpGet("status/{ic}")]
-//        public async Task<IActionResult> CheckStatus(string ic) => Ok(await _service.GetUserStatus(ic));
-
-//        [HttpPost("step1")]
-//        public async Task<IActionResult> Step1(Step1Request req) => Ok(await _service.ProcessStep1(req));
-
-//        [HttpPost("request-otp")]
-//        public async Task<IActionResult> RequestOtp(string ic, string type) => Ok(new { Otp = await _service.GenerateMockOtp(ic, type) });
-
-//        [HttpPost("verify-otp")]
-//        public async Task<IActionResult> Verify(VerifyOtpRequest req)
-//            => await _service.ValidateOtp(req) ? Ok("Verified") : BadRequest("Invalid OTP");
-
-//        [HttpPost("finalize")]
-//        public async Task<IActionResult> Finalize(PinRequest req)
-//            => await _service.CompleteRegistration(req) ? Ok("Registration Success") : BadRequest();
-//    }
-//}
-
-
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using TestProject.DTOs;
 using TestProject.Interfaces;
 
