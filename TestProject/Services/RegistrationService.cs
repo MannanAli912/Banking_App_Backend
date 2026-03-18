@@ -77,7 +77,6 @@ namespace TestProject.Services
             await _db.SaveChangesAsync();
             return mockOtp;
         }
-
         public async Task<bool> ValidateOtp(VerifyOtpRequest request)
         {
             var user = await _db.Users.FirstAsync(u => u.ICNumber == request.ICNumber);
