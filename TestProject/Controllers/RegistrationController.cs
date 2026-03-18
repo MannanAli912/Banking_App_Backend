@@ -17,7 +17,6 @@ namespace TestProject.Controllers
             var result = await _service.GetUserStatus(ic);
             return Ok(new { success = true, data = result });
         }
-
         [HttpPost("register-details")]
         public async Task<IActionResult> Step1(Step1Request req)
         {
