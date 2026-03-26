@@ -36,7 +36,6 @@ namespace TestProject.Controllers
             await _service.ValidateOtp(req);
             return Ok(new { success = true, message = "OTP verified successfully." });
         }
-
         [HttpPost("finalize-registration")]
         public async Task<IActionResult> Finalize(PinRequest req)
         {
