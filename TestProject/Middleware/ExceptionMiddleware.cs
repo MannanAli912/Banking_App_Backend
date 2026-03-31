@@ -1,5 +1,4 @@
 ﻿namespace TestProject.Middleware;
-
 public class ExceptionMiddleware
 {
     private readonly RequestDelegate _next;
